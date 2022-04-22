@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formularios</title>
+</head>
+<body style="background-color:orangered">
+    <section>
+        <h2>Formularios sencillos (Teoría)</h2>
+        <p>Para usa formularios usamos la etiqueta "form", entre los pico paréntesis, junto con las siguientes etiquetas y atributos:</p>
+        <dl>
+            <dt>Etiquetas</dt>
+            <dd><ol>
+                <li>input: Define un control de entrada</li>
+                <li>textarea: Define un contrl de entrada multilínea</li>
+                <li>label: Define una etiqueta para un elemento de entrada</li>
+                <li>fieldset: Agrupa el elemento relacionado en un formulacio</li>
+                <li>legend: Define un título para un elemento "fieldset".</li>
+                <li>select: Define una lista desplegable</li>
+                <li>optgroup: Define un grupo de opciones relacionadas en una lista despregabñe</li>
+                <li>option: Define una opción en una lista despregable.</li>
+                <li>button: Define un botón en el que se puede hacer clic</li>
+                <li>datalist: Especifica una lista de opciones predefinidas para el control de entrada.</li>
+                <li>kaygen: Define un campo generador de pares de claves para formularios.</li>
+                <li>output: Define el resultado de un cálculo</li>
+            </ol></dd>
+            <dt>Atributos</dt>
+            <dd><ol>
+                <li>action: URL. Dirección URL del back-end donde se enviará la información del formulario.</li>
+                <li>method. get I post. Método HTTP de envío. GET a través de URL, POST para envío extenso.</li>
+                <li>name: nombre. Nombre del formulario. Útil para procesar posteriormente.</li>
+                <li>target: destino. Nombre del lugar donde se abrirá el formiulacio. \_blank para nueva pestaña</li>
+                <li>enctype: tipo. Codificación para el envío del formulario. Imporatnte para envío de archivos.</li>
+                <li>accpt-ch arset. codificación. Fuerza a utilizar una codificación en los parámetros de texto del fromulario.</li>
+                <li>autocompl ete. on|off. Activa o desactiva el autocompletado para todos lo campos del formualrios.</li>
+                <li>novalidate: COn este atributo presente, el formulario obvia la validación HTML5</li>
+                <li>type: tipo de campo. Indica el tipo de campo del que se trata.</li>
+            </ol></dd>
+        </dl>
+    </section>
+    <section>
+        <h2>Formularios sencillo (Prática)</h2>
+        <h3>Input:</h3>
+        <form>
+            Introduce el nombre:
+            <input type="text" name="firstname"><br>
+            Introduce el apellido:
+            <input type="text" name="lastname">
+        </form>
+        <h3>Textarea:</h3>
+        <form>
+            Ingresa tu comentario:<br>
+            <textarea rows="10" cols="50"></textarea>
+        </form>
+        <h3>label:</h3>
+        <p>Atributo for: Lo usaremos por ahora para que, al momento de apretar el nombre salga la opción de encribir en el campo</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="firsname" placeholder="José"><br>
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="age" placeholder="25"><br>
+            <label fro="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com">
+
+        </form>
+        <h3>Usando un tipo password:</h3>
+        <form>
+            <label for="pass">Contraseña</label>
+            <input type="password" id="pass" name="password">
+        </form>
+        <h3>Usamdo type="radio"</h3>
+        <form>
+            <label for="Recepctión">Recepctión:</label>
+            <input type="radio" id="Recepctión" name="Recepctión" value="mb">Muy buena
+            <input type="radio" id="Recepctión" name="Recepctión" value="m">Media
+            <input type="radio" id="Recepctión" name="Recepctión" value="mm">Muy mala
+        </form>
+        <h3>Usando type="radio" pero mejor</h3>
+        <form>
+            <label>Películas</label><br>
+            <input type="radio" id="peli1" name="peli1">
+            <label for="peli1">El cisne negro</label><br>
+            <input type="radio" id="peli2" name="peli2">
+            <label for="peli2">Memento</label><br>
+            <input type="radio" id="peli3" name="peli3">
+            <label for="peli3">Mr Nobody</label>
+        </form>
+        <h3>Usando type="checkbox"</h3>
+        <form>
+            <label>Películas</label><br>
+            <input type="checkbox" id="pelicula1" name="peli1">
+            <label for="pelicula1">El cisne negro</label><br>
+            <input type="checkbox" id="pelicula2" name="peli2">
+            <label for="pelicula2">Memento</label><br>
+            <input type="checkbox" id="pelicula3" name="peli3">
+            <label for="pelicula3">Mr Nobody</label>
+        </form>
+        <h3>Para agregar el botón de enviar es con type="submit"</h3>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Luis">
+            <label for="name">Nombre</label><br>
+            <input type="text" id="lastname" name="lastname" placeholder="Rodrigo">
+            <label for="lastname">Apellido</label>
+            <input type="submit" value="Enviar">
+        </form>
+        <h3>Para agrupar, con la etiqueta "fieldset"</h3>
+        <form>
+            <fieldset style="width: 80px;">
+                <legend>Información básica</legend>
+                <input type="text" id="name" name="name" placeholder="Luis">
+                <label for="name">Nombre</label><br>
+                <input type="text" id="lastname" name="lastname" placeholder="Rodrigo">
+                <label for="lastname">Apellido</label>
+                <input type="submit" value="Enviar">  
+            </fieldset>
+            
+        </form>
+    </section>
+</body>
+</html>
